@@ -1,0 +1,43 @@
+
+// Media Querys
+
+$mediaQ:(
+    telefono: 480px,  
+    tablet: 768px,  
+    lgTablet: 790px, 
+    tabletEspecial: 898px,
+    smDesktop: 990px,
+    desktop: 1366px, 
+);
+
+
+@mixin telefono {
+    @media (min-width: map-get($mediaQ, telefono)) {
+        @content
+    }
+};
+@mixin tablet {
+    @media (min-width: map-get($mediaQ, tablet)) {
+        @content
+    }
+};
+@mixin lgTablet {
+    @media (min-width: map-get($mediaQ, lgTablet)) {
+        @content
+    }
+};
+@mixin tabletEspecial {
+    @media (min-width: map-get($mediaQ, tabletEspecial)) {
+        @content
+    }
+};
+@mixin smDesktop {
+    @media (min-width: map-get($mediaQ, smDesktop)) {
+        @content
+    }
+};
+@mixin Desktop {
+    @media (min-width: map-get($mediaQ, Desktop)) {
+        @content
+    }
+};

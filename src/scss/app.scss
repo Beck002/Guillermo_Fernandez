@@ -1,0 +1,17 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+
+/*  UI */
+
+@import 'layout/header';    
+@import 'layout/preMain';    
+@import 'layout/mainUnisex';    
+@import 'layout/tarjeta';    
+@import 'layout/ofertas';    
+@import 'layout/imgScale';    
+@import 'layout/bgVideo';    
+@import 'layout/footer';    
+@import 'layout/contacto';    
+@import 'layout/producto';    

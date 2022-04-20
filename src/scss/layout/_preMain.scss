@@ -1,0 +1,59 @@
+
+.preMain{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(83deg, rgba(0,0,0,0.7147233893557423) 0%, rgba(0,0,0,0.8911939775910365) 100%);
+    position: relative;
+    @include tablet{
+        padding-top: 0;
+        flex-direction: row;                 
+    }
+    
+    .preMain__img{
+
+        width: 100%;
+
+        @include tablet{
+          width: 60%;
+        }
+    }
+
+    .preMain__unisexContent{
+        margin: 0 5rem;
+        max-width: 100%;
+
+        @include tablet {
+            width: 40%;
+            margin: 0;
+        }
+
+        h2{
+            color: $blanco;
+            font-weight: bold;
+            font-family: $fuente_Secundaria;
+        }
+        p{
+            color: $blanco;
+            font-weight: 300;
+        }
+    }
+    .content__index{
+        h2{                
+            font-size: 1.8rem;
+
+            @include lgTablet{
+                font-size: 2.2rem;
+
+            }
+        }
+
+    }
+}
+
+
+

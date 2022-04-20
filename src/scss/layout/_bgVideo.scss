@@ -1,0 +1,29 @@
+/*--------------- Bg_Video hombre-mujer-------------*/
+
+.preMain__video{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 75vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(83deg, rgba(0,0,0,0.42620798319327735) 0%, rgba(0,0,0,0.5718662464985995) 100%);
+
+    .video-bg{
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+        transform: translate(0, -15rem);
+    }
+    .content__unisex{
+        margin-top: 10rem;
+
+        h2, p{
+            color: white;
+        }
+    }
+}
+
+

@@ -1,0 +1,38 @@
+.tarjeta__unisex{
+    position: relative;
+    .img__visible:hover{
+        filter: opacity(0);
+        transition: all .5s;
+    }
+    .img__visible-2{
+        position:absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .product__name{
+        display: flex;
+        align-self: flex-start;
+        font-weight: 300;
+        font-size: 2.4rem;
+    }
+    .product__price{
+        display: flex;
+        align-self: flex-start;
+        font-weight: 300;
+    }
+    .old__price{
+        text-decoration: line-through;
+    }
+}
+
+.ver-mas{
+    align-self: flex-end;
+    margin-right: 2rem;
+    text-decoration: underline;
+
+    &:hover{
+        transition: linear 0.2s;
+        transform: scale(1.1);
+        color: $grisOscuro;
+    }
+}

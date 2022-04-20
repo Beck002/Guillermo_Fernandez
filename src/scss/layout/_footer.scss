@@ -1,0 +1,129 @@
+/* -------------- Pre footer------------- */
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.preFooter{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5rem 4rem;
+    padding: 3.5rem 3rem; 
+    column-gap: 5rem;
+    background: $grisUltraClaro;
+
+    @include tablet{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .preFooter__tarjeta{
+        @extend .flex-col;
+        justify-content: center;
+
+        p{
+            font-weight: 300;
+        }
+        .preFooter__iconos{
+            max-width: 7rem;
+        }
+    }
+}
+
+
+/* ------------------- Footer -------------- */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem ;
+    padding: 2rem 0;
+    background-color: #000;
+    p{
+        color: $blanco;
+    }
+    @include tablet{
+        flex-direction: row;
+    }
+}
+
+.footer-media-rights{
+    @extend .flex-col;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.social-media{
+    display: flex;
+    gap: 4rem;
+    a{
+        color: white;
+    }
+}
+.media{
+    display: grid;
+    place-content: center;
+    color: $blanco;
+    border: 1px solid $blanco;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    &:hover{
+        color: $blanco;
+        transform: scale(1.2);
+        transition: all 1s;
+    }
+}
+
+$medias: (
+    twitter: #00ECFF,
+    instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%),
+    facebook:  #0071F0,
+);
+
+@each $media, $color in $medias {
+    .media-#{$media}:hover{
+        background: $color;
+    }
+}
+
+// .media-instagram:hover{
+//     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+//     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+//     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+// }
+// .media-facebook:hover{
+//     background-color: #0071F0;
+// }
+// .media-twitter:hover{
+//     background-color: #00ECFF ;
+// }
+.footer-nav-item{
+    color: $blanco;
+}
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 3rem;
+
+   @include telefono{
+        flex-direction: row;
+    }
+    @include tablet{
+        margin-left: 4rem;
+    }
+}
+.footer-nav a{
+    color: $blanco;
+    font-weight: 300;
+    &:hover{
+        text-decoration: underline;
+    }
+    
+}

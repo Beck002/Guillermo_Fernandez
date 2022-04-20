@@ -1,0 +1,53 @@
+.ofertasGenerales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    padding-top: 3rem 0;
+
+    .ofertasGenerales__titulo{
+        align-self: flex-start;
+        margin-left: 5rem;
+    }
+
+    .ofertasGenerales__verTodo{
+        font-size: 2rem;
+        align-self: flex-end;
+        margin-right: 10rem;
+        &:hover{
+            text-decoration: underline;
+            color: $grisOscuro;
+        }
+    }
+
+}
+.articulos__unisex{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    row-gap: 5rem;
+    margin: 3rem 5rem;
+
+    @include telefono{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem 4rem;
+        row-gap: 4rem;
+    }
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2rem 4rem;
+        row-gap: 4rem;
+    }
+
+    @include tabletEspecial{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 2rem 4rem;
+        row-gap: 4rem;
+    }
+} 

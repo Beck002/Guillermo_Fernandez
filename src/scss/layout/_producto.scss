@@ -1,0 +1,57 @@
+
+/* --------------- Seccion Producto------------ */
+
+
+.main__producto{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    gap: 4rem;
+    @include tablet{
+        flex-direction: row;       
+    }
+}
+
+
+.main__producto__imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 30rem;
+}
+
+
+.imgs__miniatura{
+    display: flex;
+}
+.imagenes__miniatura{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.miniatura{
+    width: 6.5rem;
+}
+@media (min-width: 480px){
+    .main__producto__imgs{
+        min-width: 40rem;
+    }    
+    .miniatura{
+        width: 8.5rem;
+    }
+    
+}
+
+.precio_cantidad_talle{
+    display: flex;
+    gap: 2rem;
+    margin: 4rem  0;
+}
+
+.cantidad input{
+    border: 1px solid $grisOscuro;
+    padding: 1rem;
+    background: $grisUltraClaro;
+    width: 10rem;   
+}

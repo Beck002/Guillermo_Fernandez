@@ -1,0 +1,36 @@
+/* ------------------- MAIN UNISEX -------------- */
+
+.main__unisex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    h2{
+        margin-bottom: 3rem;
+    }
+    
+    .btnGradient__gris {
+        background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
+    .btnGradient__gris{
+        margin-top: 2.5rem;
+        padding: 1.5rem 4.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+
+        &:hover {
+            background-position: right center; /* cambiar la direccion aqui */
+            color: #fff;
+            text-decoration: none;
+         }    
+    }
+    
+}
+

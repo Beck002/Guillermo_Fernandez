@@ -1,0 +1,120 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .5rem solid $grisClaro;
+    padding: 1rem 2rem;
+    background-color: #fff;
+
+    .barra{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        @include lgTablet{
+            flex-direction: row;
+        }
+        .logo{
+            max-width: 10rem;
+            min-width: 7rem;
+            margin-top: 5;
+            @include tablet{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.nav-list{
+    display: flex;  
+    flex-direction: column;    
+    gap: 2rem;  
+    margin-top: 5rem;
+
+    @include tablet{
+        flex-direction: row;
+        margin-top: 0;        
+    }
+
+    a{  
+        font-size: 2.2rem;
+        font-weight: 400;  
+
+        @include lgTablet{
+            font-size: 1.6rem;
+        }
+        &:hover{
+            color: $grisOscuro;           
+            border-bottom: .1rem solid $grisOscuro;
+            transition: all .2s;
+        }
+    }
+} 
+
+/* search-user-cart */
+
+.search-user-cart{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 4rem;
+    position: relative;
+    @include smDesktop{
+        flex-direction: row;
+        margin-top: 1rem;
+        
+    }
+    input{
+        padding: 1rem;
+        border: none;
+        background: $grisClaro;
+        outline: none;
+    }
+
+}
+
+.search-box-cart{
+    display: flex;
+    align-items: center;
+    gap: 2rem
+}
+.cart-icon{
+    padding: .5rem;
+    width: 3rem;
+    height: 3rem;
+
+    &:hover{
+        cursor: pointer;
+        background: $grisClaro;
+    }
+}
+
+.user-cart{   
+    display: flex;
+    gap: 2rem;
+    align-items: center;  
+
+    .user-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+
+        &:hover{
+            border: 2px solid $grisOscuro;
+        }
+    }
+
+    .log-in{
+        margin-left: 1rem;
+    
+        &:hover{
+            text-decoration: underline;
+            color: $grisOscuro;
+        }
+    }
+    
+}
+
+
