@@ -21,10 +21,10 @@ const paths = {
 
 function css() {
     return src(paths.scss) // Identificar el archivo .SCSS a compilar
-        // .pipe( sourcemaps.init() )
+        .pipe( sourcemaps.init() )
         .pipe( sass() ) // Compilarlo
-        // .pipe( postcss([ autoprefixer(), cssnano() ]) )
-        // .pipe(sourcemaps.write('.'))
+        .pipe( postcss([ autoprefixer(), cssnano() ]) )
+        .pipe(sourcemaps.write('.'))
         .pipe( dest('./build/css') ) // Almacenarla en el disco duro
 }
 
@@ -41,7 +41,6 @@ function imagenes() {
     src('src/imagenes/iconos-logos/*')
         .pipe(cache(imagemin({ optimizationLevel: 3})))
         .pipe(dest('./build/img/iconos-logos'));      
-    
 }
 
 
@@ -70,6 +69,7 @@ function watchArchivos() {
     watch( paths.imagenes, versionWebp );
 }
 
-exports.watchArchivos = watchArchivos ; 
+exports.watchArchivos = watchArchivos ;
+exports.css           = css;  
 exports.default       = parallel( css, imagenes, versionWebp, watchArchivos) ;
 
